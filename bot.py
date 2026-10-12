@@ -71,7 +71,7 @@ async def on_page(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
 def main() -> None:
-    token = "7346396333:AAETgK_1ZGix3OSzB83mldgzTLxybV66C-s"
+    token = ""
     app = Application.builder().token(token).build()
     app.add_handler(CommandHandler(["start", "help"], start))
     app.add_handler(CallbackQueryHandler(on_page, pattern=r"^p:\d+$"))
